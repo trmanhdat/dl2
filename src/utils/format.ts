@@ -10,3 +10,5 @@ export const getEllipsisTxt = (str?: string, n = 6) => {
   }
   return '';
 };
+
+//hàm JavaScript được định nghĩa để tạo ra một chuỗi mới từ chuỗi đầu vào

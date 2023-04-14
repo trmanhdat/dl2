@@ -11,3 +11,5 @@ const ColorModeButton = () => {
 };
 
 export default ColorModeButton;
+
+//một React component sử dụng Chakra UI library để tạo ra một button có chức năng chuyển đổi giữa chế độ màu sáng và tối trên trang web

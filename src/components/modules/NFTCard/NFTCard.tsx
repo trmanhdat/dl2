@@ -1,3 +1,5 @@
+// dùng để hiển thị thông tin về 1 NFT
+
 import { Box, HStack, Image, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 import { EvmNft } from '@moralisweb3/common-evm-utils';
 import { Eth } from '@web3uikit/icons';

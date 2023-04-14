@@ -13,3 +13,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+// sử dụng Chakra UI library để tạo ra một thanh điều hướng (navigation bar) cho trang web.

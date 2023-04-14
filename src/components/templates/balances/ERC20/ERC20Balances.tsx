@@ -15,17 +15,18 @@ import {
   HStack,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { useEvmWalletTokenBalances } from '@moralisweb3/next';
-import { useSession } from 'next-auth/react';
-import { useEffect } from 'react';
-import { getEllipsisTxt } from 'utils/format';
+import { useEvmWalletTokenBalances } from '@moralisweb3/next'; //hook lấy thông tin về số dư các token mà người dùng sở hữu trong ví
+import { useSession } from 'next-auth/react'; //lấy thông tin về phiên đăng nhập hiện tại của người dùng
+import { useEffect } from 'react';//hook cho phép ta thực hiện các tác vụ sau khi component đã được render.
+import { getEllipsisTxt } from 'utils/format';//hook cho phép ta lấy thông tin về mạng hiện tại của người dùng trong ứng dụng.
 import { useNetwork } from 'wagmi';
 
+//chức năng React được sử dụng để hiển thị số dư token ERC20
 const ERC20Balances = () => {
   const hoverTrColor = useColorModeValue('gray.100', 'gray.700');
-  const { data } = useSession();
-  const { chain } = useNetwork();
-  const { data: tokenBalances } = useEvmWalletTokenBalances({
+  const { data } = useSession(); //lấy thông tin phiên đn
+  const { chain } = useNetwork(); // lấy thông tin chuỗi mạng
+  const { data: tokenBalances } = useEvmWalletTokenBalances({ //lấy số dư
     address: data?.user?.address,
     chain: chain?.id,
   });

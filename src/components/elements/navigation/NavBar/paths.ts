@@ -1,10 +1,14 @@
 import { ISubNav } from '../SubNav/SubNav';
-
+// tạo liên kết cho thanh điều hướng 
 const NAV_LINKS: ISubNav[] = [
   { label: 'Home', href: '/' },
   {
     label: 'Transactions',
     href: '/transactions',
+  },
+  {
+    label: 'Live Chart',
+    href: '/gas',
   },
   {
     label: 'Transfers',

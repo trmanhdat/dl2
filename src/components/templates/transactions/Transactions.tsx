@@ -11,12 +11,14 @@ import {
   Box,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { useEvmWalletTransactions } from '@moralisweb3/next';
-import { useSession } from 'next-auth/react';
-import { useEffect } from 'react';
+//một React functional component được sử dụng để hiển thị danh sách các giao dịch được thực hiện trên một địa chỉ ví Ethereum
+import { useEvmWalletTransactions } from '@moralisweb3/next'; //lấy thông tin các giao dịch của địa chỉ ví được cung cấp.
+import { useSession } from 'next-auth/react'; //lấy thông tin phiên đăng nhập của người dùng
+import { useEffect } from 'react'; //thực hiện các tác vụ sau khi component được render
 import { getEllipsisTxt } from 'utils/format';
-import { useNetwork } from 'wagmi';
+import { useNetwork } from 'wagmi'; //lấy thông tin chuỗi mạng hiện tại
 
+//lấy ds giao dịch và hiển thị
 const Transactions = () => {
   const hoverTrColor = useColorModeValue('gray.100', 'gray.700');
   const { data } = useSession();

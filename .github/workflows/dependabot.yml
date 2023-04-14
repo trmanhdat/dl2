@@ -8,3 +8,4 @@ updates:
       prefix: fix
       prefix-development: chore
       include: scope
+# dùng để tự động cập nhật các phần mềm và các thư viện phụ thuộc trong dự án

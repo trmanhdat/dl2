@@ -5,3 +5,4 @@ module.exports = {
     'no-console': 'off',
   },
 };
+//tệp cấu hình ESLint được viết bằng JavaScript module
